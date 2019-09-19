@@ -26,9 +26,11 @@ Files generated from the source code for a development environment. This is the 
 
 _Don't make any changes to the contents of this directory as any changes may be overridden by any of the gulp development tasks._
 
-**~/dist/**
+**~/docs/**
 
 Files generated from the source code for a production environment. These files are intended to be minimized for performance. See Gulp Tasks to see how to populate this directory and preview its contents in the browser.
+
+Why docs instead of dist? This site is destined for GitHub Pages which uses docs, so this removes the step of renaming the distribution file between updates.
 
 _Don't make any changes to the contents of this directory as any changes may be overridden by any of the gulp production tasks._
 
@@ -102,10 +104,10 @@ _Note:_ Many of the gulp development tasks have a production version that may be
 
 * **gulp build**
 
-Run all tasks for greeting a full site suitable to a production environment in the distribution folder (~/dist).
+Run all tasks for greeting a full site suitable to a production environment in the distribution folder (~/docs).
 
 These tasks include production versions of the gulp development tasks, such as: gulp html--prod, gulp scripts--prod, gulp styles--prod, etc.
 
-* **gulp previewDist**
+* **gulp previewDocs**
 
-This will run browsersync and open a browser window to view the distribution/production version of the site. If no content is displayed, run the task gulp build first to generate the distribution files.
+This will run browsersync and open a browser window to view the distribution/production version of the site. If no content is displayed, run the task gulp build first to generate the distribution files (~/docs).
