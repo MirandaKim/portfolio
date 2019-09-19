@@ -74,9 +74,13 @@
   &__list {
     /*mixins*/
     @mixin edgeBullets 10px, 10px, -1px;
+    /*position*/
+    position: relative;
 
     /*list items*/
     li {
+      /*position*/
+      position: relative;
       /*spacing*/
       padding-left: .8rem;
       padding-bottom: .2rem;

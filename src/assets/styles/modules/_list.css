@@ -34,12 +34,7 @@
   /*   # Spacing                       */
   /************************************/
 
-  /*
-  No Start Padding
-  Remove the default (some browsers) start padding*/
-  &--no-start-padding {
-    padding-inline-start: 0;
-  }
+  
 
   /**************************************/
   /*   # Display                       */

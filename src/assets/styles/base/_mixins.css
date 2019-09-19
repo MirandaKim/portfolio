@@ -194,7 +194,6 @@ Style requires li children and the use of the li children's before*/
   list-style: none;
   /*spacing -- remove ul default left spacing*/
   margin-block-start: 0;
-  padding-inline-start: 0;
 
   & > li {
     /*position*/
@@ -236,13 +235,8 @@ topShift: Amount to shift the bullet vertically (positive value moves up)
   list-style: none;
   /*spacing -- remove ul default left spacing*/
   margin-block-start: 0;
-  padding-inline-start: 0;
 
   /*Variables*/
-  /* $eyeBullet_outerLeft: ($leftShift + $bSize/2) * -1;
-  $eyeBullet_outerTop: $bSize / 2 - $topShift;
-  $eyeBullet_outerBorderWidth: 2px; */
-
   $eyeBullet_outerLeft: (40px + $leftShift + $bSize/2) * -1;
   $eyeBullet_outerTop: $bSize / 2 - 23px - $topShift;
   $eyeBullet_outerBorderWidth: 2px;

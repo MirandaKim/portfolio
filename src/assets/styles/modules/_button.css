@@ -77,7 +77,10 @@
 
   &--popout {
 
+    /*mixins*/
     @mixin popout $color_d, 4px, 8px;
+    /*typography*/
+    font-weight: 700;
 
     /**************
     *   > Hover   *

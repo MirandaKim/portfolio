@@ -19,6 +19,7 @@
   # Fonts
   # Links
   # Buttons
+  # Lists
 
 */
 
@@ -79,7 +80,6 @@ a {
   /*typography*/
   font-family: $font_karla;
   text-decoration: none;
-  font-weight: 700;
   /*colors*/
   color: $color_text_link;
 
@@ -98,4 +98,12 @@ button {
   /*typography*/
   font-family: $font_karla;
   font-weight: 700;
+}
+
+/**************************************/
+/*   # Lists                         */
+/************************************/
+
+ul, ol {
+  padding-inline-start: 0;
 }

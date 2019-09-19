@@ -22,6 +22,7 @@
   # For Tiny Device
     > Main Nav
     > Link Group
+    > Link Group List Items
     > Link
     > Active Link
 
@@ -42,74 +43,165 @@ $mn_activeLinkBulletSize: 12px;
 
   /*position*/
   position: relative;
+  /*structure*/
+  height: auto;
+  width: auto;
+  /*spacing*/
+  padding-top: 3rem;
+  /*typography*/
+  text-align: center;
 
-  /**************************************/
-  /*   # Link Group                    */
-  /************************************/
+  /******************
+  *  > Link Group   *
+  ******************/
 
   &__link-group {
+    /*position*/
+    position: relative;
+    /*structure*/
+    height: auto;
     /*spacing*/
-    margin-top: 1.3rem;
-    margin-bottom: 1.1rem;
+    margin-top: 0;
+    margin-block-start: 0;
+
   }
 
-  &__link-group > li {
-    display: inline-block;
-    margin-left: 1rem;
-    margin-right: 1rem;
+  /*****************************
+  *  > Link Group List Items   *
+  *****************************/
 
+  &__link-group>li {
+    /*display*/
+    display: block;
+    /*spacing*/
+    margin-bottom: 3rem;
 
-    @mixin atSmall {
-      &:last-child {
-        margin-right: 0;
-      }
+    @mixin forLandscape {
+      margin-bottom: 2rem;
     }
   }
 
 
-  /**************************************/
-  /*   # Link                          */
-  /************************************/
+  /************
+  *  > Link   *
+  ************/
 
   &__link {
+
     /*position*/
     position: relative;
+    /*position*/
+    z-index: 1;
     /*typography*/
-    font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    /*spacing*/
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 25px;
+    padding-right: 25px;
     /*colors*/
     color: $color_a;
 
-    /**************
-    *  > Before   *
-    **************/
+    /*for mouse devices at tiny sizes*/
+    .has-no-touch &:hover {
+      color: rgb($color_darkBlue);
+      font-weight: 900;
+    }
 
-    &::before {
-      content: "";
-      /*display*/
-      display: none;
-      box-sizing: content-box;
-      /*position*/
-      position: absolute;
-      left: calc(50% - 6px);
-      bottom: -25px;
-      /*structure*/
-      height: $mn_activeLinkBulletSize;
-      width: $mn_activeLinkBulletSize;
-      /*borders*/
-      border-radius: 50%;
-      /*colors*/
-      background-color: $color_a;
+
+    /*******************
+    *  > Active Link   *
+    *******************/
+
+    /*mixin*/
+    &.active {
+
+      /*typography*/
+      font-weight: 700;
 
     }
 
-    /****************
-    *  > At Small   *
-    ****************/
+  }
 
-    @mixin atSmall {
+}
+
+@mixin atSmall {
+  .main-nav {
+    padding-top: 0;
+    padding-bottom: 0;
+    /**************************************/
+    /*   # Link Group                    */
+    /************************************/
+
+    &__link-group {
+      /*spacing*/
+      margin-top: 1.3rem;
+      margin-bottom: 1.1rem;
+    }
+
+    &__link-group > li {
+      display: inline-block;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-bottom: auto;
+
+
+      @mixin atSmall {
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+
+    /**************************************/
+    /*   # Link                          */
+    /************************************/
+
+    &__link {
+
+      /*spacing*/
+      padding: 0;
+      /*typography*/
+      font-weight: 300;
+      font-size: 1rem;
+
+
+      /**************
+      *  > Before   *
+      **************/
+
+      &::before {
+        content: "";
+        /*display*/
+        display: none;
+        box-sizing: content-box;
+        /*position*/
+        position: absolute;
+        left: calc(50% - 6px);
+        top: auto;
+        bottom: -25px;
+        /* bottom: -17px; */
+        /*structure*/
+        height: $mn_activeLinkBulletSize;
+        width: $mn_activeLinkBulletSize;
+        /*borders*/
+        border-radius: 50%;
+        /*colors*/
+        background-color: $color_a;
+
+      }
+
+      &::after {
+        display: none;
+      }
+
       .has-no-touch &:hover {
+        /*mixin*/
         @mixin shadowBold $color_darkBlue;
+        /*typography*/
+        font-weight: 300;
+        /*color*/
         color: $color_a;
 
         &:not(.active)::before {
@@ -117,139 +209,41 @@ $mn_activeLinkBulletSize: 12px;
           background-color: rgba($color_white);
         }
       }
-    }
 
-    /*******************
-    *  > Active Link   *
-    *******************/
+      /*******************
+      *  > Active Link   *
+      *******************/
 
-    &.active {
+      &.active {
+        /*mixin*/
+        @mixin shadowBold $color_darkBlue;
+        /*typography*/
+        font-weight: 300;
 
-      @mixin shadowBold $color_darkBlue;
+        &::after {
+          display: none;
+        }
 
-      &::before {
-        opacity: 1;
-        display: block;
-
+        &::before {
+          content: "";
+          /*display*/
+          display: block;
+          box-sizing: content-box;
+          /*position*/
+          position: absolute;
+          left: calc(50% - 6px);
+          top: auto;
+          /*structure*/
+          height: $mn_activeLinkBulletSize;
+          width: $mn_activeLinkBulletSize;
+          /*borders*/
+          border-radius: 50%;
+          /*colors*/
+          background-color: $color_a;
+        }
       }
+
     }
 
   }
-
-}
-
-/**************************************/
-/*   # For Tiny Device               */
-/************************************/
-
-@mixin forTiny {
-
-  /****************
-  *  > Main Nav   *
-  ****************/
-
-  .main-nav {
-
-      /*structure*/
-      height: auto;
-      /* width: 100%; */
-      width: auto;
-      /*spacing*/
-      padding-top: 3rem;
-      /*typography*/
-      text-align: center;
-
-      /******************
-      *  > Link Group   *
-      ******************/
-
-      &__link-group {
-        /*spacing*/
-        margin-top: 0;
-        margin-block-start: 0;
-        padding-inline-start: 0;
-      }
-
-      &__link-group > li {
-        /*display*/
-        display: block;
-        /*spacing*/
-        margin-bottom: 3rem;
-
-        @mixin forLandscape {
-          margin-bottom: 2rem;
-        }
-      }
-
-      /************
-      *  > Link   *
-      ************/
-
-      &__link {
-
-        /*for mouse devices at tiny sizes*/
-        .has-no-touch &:hover {
-          color: rgb($color_darkBlue);
-          font-weight: 900;
-        }
-
-        /*position*/
-        z-index: 1;
-        /*typography*/
-        font-size: 1.2rem;
-        /*spacing*/
-        padding-top: 9px;
-        padding-bottom: 9px;
-        padding-left: 25px;
-        padding-right: 25px;
-
-        /* &:hover::before {
-          display: none;
-        } */
-
-        /*******************
-        *  > Active Link   *
-        *******************/
-
-        /*mixin*/
-        &.active {
-
-          &::before {
-            /*position*/
-            left: auto;
-            right: 100%;
-            top: calc(50% + 1px);
-            /*structure*/
-            width: 50vw;
-            height: 2px;
-            /*borders*/
-            border-radius: initial;
-          }
-
-          &::after {
-            content: "";
-            /*display*/
-            display: inline-block;
-            /*position*/
-            position: absolute;
-            right: auto;
-            left: 100%;
-            top: calc(50% + 1px);
-            /*structure*/
-            width: 50vw;
-            height: 2px;
-            /*borders*/
-            border-radius: initial;
-            /*colors*/
-            background-color: $color_a;
-
-          }
-        }
-
-
-      }
-
-    }
-
-
 }
