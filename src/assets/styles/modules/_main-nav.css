@@ -214,7 +214,7 @@ $mn_activeLinkBulletSize: 12px;
           border-width: 2px;
           /*colors*/
           border-color: $color_a;
-          background-color: transparent;
+          background-color: rgb($color_white);
         }
       }
 
