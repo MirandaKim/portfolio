@@ -20,6 +20,8 @@
     > Circle
   # Line
   # Image
+  # Description
+  # Button
 
 */
 
@@ -225,5 +227,42 @@
       /*transform*/
       transform: scale(.7);
     }
+  }
+
+  /**************************************/
+  /*   # Description                   */
+  /************************************/
+
+  &__desc-wrapper {
+    /*display*/
+    position: absolute;
+    /*position*/
+    left: calc(50% - 1rem + 2px);
+    top: 50%;
+    /*structure*/
+    height: auto;
+    width: auto;
+
+    @mixin atSmall {
+      /*position*/
+      left: 28%;
+      top: 66%;
+    }
+
+    @mixin atMedium {
+      /*posotion*/
+      top: 77%;
+      left: 28%;
+    }
+  }
+
+  /**************************************/
+  /*   # Button                        */
+  /************************************/
+
+  &__button {
+    /*position*/
+    position: relative;
+
   }
 }

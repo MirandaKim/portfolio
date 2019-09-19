@@ -21,6 +21,8 @@
   # Button
   # Popout Button
     > Hover
+  # Circle Button
+    > Hover
 
 */
 
@@ -97,5 +99,39 @@
     }
 
 
+  }
+
+  /**************************************/
+  /*   # Circle Button                 */
+  /************************************/
+
+  &--circle {
+    /*structure*/
+    height: 30px;
+    width: 30px;
+    /*borders*/
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    /*colors*/
+    border-color: $color_a;
+    background-color: rgb($color_white);
+
+    /**************
+    *   > Hover   *
+    **************/
+
+    .has-no-touch &:hover {
+      background-color: $color_d;
+    }
+
+    .button__icon {
+      /*position*/
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      /*structure*/
+      width: 10px;
+    }
   }
 }
