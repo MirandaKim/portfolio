@@ -8,7 +8,7 @@ const browserSync = require('browser-sync').create();
 /************************************************/
 /*
 
-  - Run task 'gulp previewDist' to preview the distribution content in the browser.
+  - Run task 'gulp previewDocs' to preview the distribution content in the browser.
   - If no content is displayed, run 'gulp build' then try this task again.
   - This task previews the production site only.
     To preview the development site, see gulp task 'watch' (~/gulp/tasks/watch.task.js)
@@ -18,7 +18,7 @@ const browserSync = require('browser-sync').create();
   *************
 
   # Configs
-  # Preview Dist
+  # Preview Docs
 
 */
 
@@ -26,20 +26,20 @@ const browserSync = require('browser-sync').create();
 /*   # Configs                      */
 /***********************************/
 
-let distPath = 'dist'; // location of distribution files
+let docsPath = 'docs'; // location of distribution files
 
 /*************************************/
-/*   # Preview Dist                 */
+/*   # Preview Docs                 */
 /***********************************/
 
 /*
   Preview production files in browser
 */
-gulp.task('previewDist', () => {
+gulp.task('previewDocs', () => {
   browserSync.init({
     notify: false, // False, don't show any notifications in the browser (default true)
     server: {
-      baseDir: distPath // Location of distribution files
+      baseDir: docsPath // Location of distribution files
     }
   });
 });

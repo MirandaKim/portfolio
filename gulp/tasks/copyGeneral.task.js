@@ -29,7 +29,7 @@ const gulp = require('gulp');
 /***********************************/
 
 let devDest = 'tmp'; // development destination
-let prodDest = 'dist'; // production destination
+let prodDest = 'docs'; // production destination
 
 let copyPaths = [ // Paths to copy, and NOT copy (!)
   // Paths to copy:

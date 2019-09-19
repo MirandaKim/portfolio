@@ -35,10 +35,10 @@ let devInjectSrc = [ // files to inject into the development index.html
   'tmp/assets/scripts/*.js'
 ];
 
-let prodDest = 'dist'; // production destination
+let prodDest = 'docs'; // production destination
 let prodInjectSrc = [ // files to inject into the production index.html
-  'dist/**/*.js',
-  'dist/**/*.css'
+  'docs/**/*.js',
+  'docs/**/*.css'
 ];
 
 /*************************************/

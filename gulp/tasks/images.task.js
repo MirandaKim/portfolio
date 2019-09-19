@@ -27,7 +27,7 @@ const imagemin = require('gulp-imagemin');
 /***********************************/
 
 let devDest = './tmp/assets/images'; // development destination
-let prodDest = './dist/assets/images'; // production destination
+let prodDest = './docs/assets/images'; // production destination
 
 let imageSrc = [
     /* Images to optimize */

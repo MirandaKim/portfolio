@@ -14,7 +14,7 @@ const browserSync = require('browser-sync').create();
   - Watch task uses BrowserSync to connect with the browser(s)
   - This watch task only preview the generated development files. If no content is displayed,
     run 'gulp dev' (and optional: 'gulp images', 'gulp favicons', 'gulp copyGeneral'...).
-  - To preview the production site, see gulp task previewDist (~/gulp/tasks/previewDist.task.js)
+  - To preview the production site, see gulp task previewDocs (~/gulp/tasks/previewDocs.task.js)
 
   *************
   * Contents: *

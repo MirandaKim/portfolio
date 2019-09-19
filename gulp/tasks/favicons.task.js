@@ -31,7 +31,7 @@ let iconSrc = [ // list of favicon image locations
 ];
 
 let devDest = 'tmp'; // development destination
-let prodDest = 'dist'; // production destination\
+let prodDest = 'docs'; // production destination\
 
 /*************************************/
 /*   # Development                  */
