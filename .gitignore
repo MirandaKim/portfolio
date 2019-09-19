@@ -18,6 +18,7 @@ design/
 working/
 .test/
 .trashed/
+TODOS.md
 
 # OS or Editor folders
 .DS_Store
