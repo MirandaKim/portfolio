@@ -180,8 +180,7 @@ $mn_activeLinkBulletSize: 12px;
         position: absolute;
         left: calc(50% - 6px);
         top: auto;
-        bottom: -25px;
-        /* bottom: -17px; */
+        bottom: -26px;
         /*structure*/
         height: $mn_activeLinkBulletSize;
         width: $mn_activeLinkBulletSize;
@@ -205,8 +204,17 @@ $mn_activeLinkBulletSize: 12px;
         color: $color_a;
 
         &:not(.active)::before {
+          /*display*/
           display: block;
-          background-color: rgba($color_white);
+          /*structure*/
+          height: calc($mn_activeLinkBulletSize - 4px);
+          width: calc($mn_activeLinkBulletSize - 4px);
+          /*borders*/
+          border-style: solid;
+          border-width: 2px;
+          /*colors*/
+          border-color: $color_a;
+          background-color: transparent;
         }
       }
 
