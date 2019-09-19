@@ -83,6 +83,7 @@ gulp.task('build', gulp.series(
   'images--prod',
   'scripts--prod',
   'styles--prod',
+  'favicons--prod',
   'html--prod',
   (done) => {
     console.log(`
