@@ -98,7 +98,7 @@ navDisplay.setEvents({ // See NavDisplay.class.js for config options.
     - Changing the section indicator in the body tag (data-section=0)
 */
 let section_selector = '.section';
-let section_activeLinkClassStr = `active ${mainNav_block}__link--active`;
+let section_activeLinkClassStr = `active`;
 
 let sectionChange = new SectionChange(section_selector, section_activeLinkClassStr);
 sectionChange.scrollUpOffset = "-5%";
