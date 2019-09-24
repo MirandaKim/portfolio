@@ -15,6 +15,7 @@
   *************
 
   # Skip Link
+    > Hover
     > Focus
 
 */
@@ -41,13 +42,23 @@
   border-width: 2px;
   /*colors*/
   border-color: $color_a;
-  background-color: $color_b;
+  background-color: $color_c;
   color: $color_a;
   /*transform*/
   transform: translateX(calc(-100% - $site_margin_outer_sides));
   /*transition*/
   transition-property: transform;
   transition-duration: 800ms;
+
+  /*************
+  *  > Hover   *
+  *************/
+
+  .has-no-touch &:hover {
+    /*colors*/
+    color: $color_a;
+    background-color: $color_b;
+  }
 
   /*************
   *  > Focus   *
