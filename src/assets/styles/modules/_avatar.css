@@ -231,8 +231,9 @@
     /*display*/
     position: absolute;
     /*position*/
-    left: calc(50% - 1rem + 2px);
-    top: 50%;
+    /* left: calc(50% - 1rem + 2px); */
+    left: calc(50% - 80px);
+    top: 310px;
     /*structure*/
     height: auto;
     width: auto;
