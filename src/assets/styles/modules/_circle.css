@@ -212,5 +212,15 @@ $withRing_defaultSize: 40px;
     transform: translate(50%, -50%);
   }
 
+  &--near-top {
+    /*position*/
+    top: 25%;
+  }
+
+  &--near-bottom {
+    /*position*/
+    top: 80%;
+  }
+
 
 }
