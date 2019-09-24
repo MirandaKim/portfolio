@@ -1,0 +1,182 @@
+
+/****************************************************/
+/*                                                 */
+/*   Speech Bubble CSS (_speech-bubble.css)       */
+/*                                               */
+/************************************************/
+/*
+
+  Stylized wrapper and content made to look with like a speech bubble.
+
+  How to use:
+  - Give an element the class speech-bubble
+  - This element must contain a speech-bubble_bubble element.
+  - The before and after elements of the speech-bubble__bubble are required for the effect.
+  - The text/image content should be placed within the speech-bubble__bubble element
+  - See Minimum and Full Examples below.
+
+  Options:
+  - Hide till parent is hovered: give the wrapper element the class
+  - Drop shadow: create an element nested directly in the speech-bubble the class speech-bubble__drop-shadow
+  - Scale down: make the speech bubble a bit smaller by adding the modifier class speech-bubble--scale-down
+
+Minimum Example:
+  <div class="speech-bubble">
+    <div class="speech-bubble__bubble"></div>
+  </div>
+
+Full Example:
+  <div class="speech-bubble__wrapper speech-bubble__wrapper--hover-toggle"></div>
+    <div class="speech-bubble speech-bubble--scale-down">
+      <div class="speech-bubble__drop-shadow"></div>
+      <div class="speech-bubble__bubble">
+        ...
+      </div>
+    </div>
+  </div>
+
+  *************
+  * Contents: *
+  *************
+
+  # Wrapper
+  # Speech Bubble
+    > Scale Down
+  # Bubble
+    > Before
+    > After
+  # Drop Shadow
+
+*/
+
+/**************************************/
+/*   # Wrapper                       */
+/************************************/
+
+.speech-bubble__wrapper {
+  &--hover-toggle {
+    .speech-bubble {
+      display: none;
+    }
+  }
+  &--hover-toggle:hover {
+    .speech-bubble {
+      display: block;
+    }
+  }
+}
+
+/**************************************/
+/*   # Speech Bubble                 */
+/************************************/
+
+
+.speech-bubble {
+  /*position*/
+  z-index: 100;
+  position: absolute;
+  top: calc(50% + 30px);
+  left: -6px;
+  /*structure*/
+  height: auto;
+  width: auto;
+
+  /******************
+  *  > Scale Down   *
+  ******************/
+
+  &--scale-down {
+    /*transform*/
+    transform: scale(.85);
+    transform-origin: top left;
+  }
+
+  /**************************************/
+  /*   # Speech Bubble                 */
+  /************************************/
+
+  &__bubble {
+    /*position*/
+    position: relative;
+    /*structure*/
+    min-width: 240px;
+    /*spacing*/
+    margin-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    /*borders*/
+    border-style: solid;
+    border-width: 2px;
+    /*colors*/
+    border-color: $color_a;
+    background-color: rgb($color_white);
+
+    /**************
+    *  > Before   *
+    **************/
+    /*Creates the triangle sticking out of the speech bubble
+    near the north-west corner of the bubble*/
+    &::before {
+      content: "";
+      /*position*/
+      position: absolute;
+      top: -28px;
+      left: 22px;
+      /*structure*/
+      height: 36px;
+      width: 28px;
+      /*borders*/
+      border-top-style: solid;
+      border-top-width: 3px;
+      border-left-style: solid;
+      border-left-width: 2px;
+      /*colors*/
+      background-color: rgb($color_white);
+      border-color: $color_a;
+      /*transform*/
+      transform: skew(0deg, 40deg) rotate(0deg);
+
+    }
+
+    /*************
+    *  > After   *
+    *************/
+    /*Creates a long rectangle in the north-east corner of the bubble
+    to make the bubble look taller on the right side.*/
+    &::after {
+      content: "";
+      /*position*/
+      position: absolute;
+      top: -16px;
+      left: 50px;
+      /*structure*/
+      height: 18px;
+      width: calc(100% - 50px);
+      /*borders*/
+      border-width: 2px;
+      border-right-style: solid;
+      border-top-style: solid;
+      /*colors*/
+      background-color: rgb($color_white);
+    }
+  }
+
+  /**************************************/
+  /*   # Drop Shadow                   */
+  /************************************/
+
+  &__drop-shadow {
+    /*position*/
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    /*structure*/
+    height: 100%;
+    width: 100%;
+    /*colors*/
+    background-color: $color_d;
+  }
+
+}
