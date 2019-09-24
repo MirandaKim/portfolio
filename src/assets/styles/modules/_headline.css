@@ -18,6 +18,7 @@
     > Large
     > Medium
     > Small
+  # Spacing
   # Styles
 
 */
@@ -66,6 +67,20 @@
   &--small {
     font-size: 1.2rem;
     line-height: 1.6;
+  }
+
+  /**************************************/
+  /*   # Spacing                       */
+  /************************************/
+
+  &--more-bottom-margin {
+    margin-bottom: 3.5rem;
+  }
+
+  &--more-bottom-margin-at-small {
+    @mixin atSmall {
+      margin-bottom: 3.5rem;
+    }
   }
 
   /**************************************/
