@@ -117,9 +117,6 @@
       left: 0;
       /*structure*/
       width: 105px;
-      /*transition*/
-      transition-property: width;
-      transition-duration: 500ms;
 
       .avatar__circle {
         /*colors*/
@@ -185,9 +182,6 @@
     left: 125px;
     /*structure*/
     height: calc(100% - 12px);
-    /*transition*/
-    transition-property: left;
-    transition-duration: 500ms;
 
     @mixin atSmall {
       /*position*/
