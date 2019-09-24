@@ -19,8 +19,28 @@
   # Column
     > Modifiers
   # For Tiny
+  # At Medium
 
 */
+
+/**************************************/
+/*   # Mixins                        */
+/************************************/
+
+@define-mixin columnSizing {
+  /*Loop through to create 12 column sizes 1-12, 2-12, 3-12... 12-12, requires postcss-for*/
+  @for $i from 1 to 12 {
+    &--$(i)-12 {
+      width: calc((100%/12)*$i - 5px);
+      margin-right: 5px;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+}
 
 /**************************************/
 /*   # Column Group                  */
@@ -48,28 +68,12 @@
 /************************************/
 
 .column {
+  /*mixin*/
+  @mixin columnSizing;
   /*display*/
   display: inline-block;
   /*position*/
   position: relative;
-
-  /*Loop through to create 12 column sizes 1-12, 2-12, 3-12... 12-12, requires postcss-for*/
-  @for $i from 1 to 12 {
-    &--$(i)-12 {
-      width: calc((100%/12)*$i - 5px);
-      margin-right: 5px;
-    }
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  /******************
-  *   > Modifiers   *
-  ******************/
-
-
 }
 
 /**************************************/
@@ -79,13 +83,42 @@
 .column__group {
   @mixin forTiny {
 
-  &--not-for-tiny { /**/
+  /********************
+  *  > Not For Tiny   *
+  ********************/
 
+  /*Column will be at full width for tiny screens,
+    then will appear based on their specified width at small*/
+  &--not-for-tiny {
       .column {
         width: 100%;
       }
-
     }
+  }
+}
+
+/**************************************/
+/*   # At Medium                     */
+/************************************/
+
+.column__group {
+
+  /*****************
+  *  > At Medium   *
+  *****************/
+
+  /*Columns will be at full width until the screen/device is medium sized,
+  then the columns will appear based on their specified width.*/
+  &--at-medium {
+    .column {
+      width: 100%;
+    }
+    @mixin atMedium {
+      .column {
+        @mixin columnSizing;
+      }
+    }
+
   }
 
 }
