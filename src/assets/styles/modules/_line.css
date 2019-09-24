@@ -103,6 +103,12 @@ $line_defaultThickness: 2px;
   &--extend {
     height: 150%;
   }
+  &--extend-less {
+    height: 130%;
+  }
+  &--extend-more {
+    height: 170%;
+  }
 
   &--short {
     height: 75%;
