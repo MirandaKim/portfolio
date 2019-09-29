@@ -95,6 +95,6 @@ $color_e: rgb($color_mediumYellow);
 
 /*TEXT*/
 $color_text_main: rgb($color_darkBlue);
-$color_text_link: rgb($color_mediumBlue);
-$color_text_link_hover: rgb($color_darkYellow);
+$color_text_link: rgb($color_darkYellow);
+$color_text_link_hover: rgb($color_mediumBlue);
 $color_text_link_button: rgb($color_darkBlue);

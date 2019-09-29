@@ -26,11 +26,12 @@
         </div>
       </div>
       <a class="skip-link" href="#home">Skip to main content</a>
-      <button class="site-header__menu-toggle">
+      <button class="site-header__menu-toggle" aria-hidden>
         <div class="menu-icon menu-icon--trans-to-x"></div>
       </button>
       <div class="site-header__menu-wrapper">
         <nav class="main-nav">
+          <span class="sr-only">Jump to:</span>
           <ul class="main-nav__link-group list list--no-bullets">
             <li>
               <a id="link-about" class="main-nav__link" href="#about">about</a>
@@ -68,12 +69,12 @@
                 </div>
               </div>
               <div class="avatar__line line line--ball-ends"></div>
-              <img class="avatar__image" src="assets/images/avatar.svg">
-              <div class="avatar__desc-wrapper speech-bubble__wrapper speech-bubble__wrapper--hover-toggle">
+              <img class="avatar__image" src="assets/images/avatar.svg" alt="Miranda Hoover's cartoon-ish self portrait.">
+              <div tabindex="0" class="avatar__desc-wrapper speech-bubble__wrapper speech-bubble__wrapper--hover-toggle">
                 <div class="avatar__button button button--circle">
                   <img class="button__icon icon" src="assets/images/icons/icon-asterisk-32px.svg" alt="">
                 </div>
-                <div class="avatar__description speech-bubble speech-bubble--scale-down">
+                <div class="avatar__description speech-bubble speech-bubble--scale-down" aria-hidden="true">
                   <div class="speech-bubble__drop-shadow"></div>
                   <div class="speech-bubble__bubble">
                     <p class="paragraph paragraph--no-vert-space paragraph--bold">My (kinda) self portrait. </p>
@@ -102,8 +103,8 @@
           <div class="column column--8-12">
             <h2 class="headline headline--large section__headline">About Me</h2>
             <p>I am a front-end web developer that ventures into the world of full-stack from time to time. My drive is to create things people can appreciate, and to create them well.</p>
-        <p>Shortly after graduation, I created my first website. As basic and unresponsive as it was, I was excited by the potential of what coding could do. Since then, I’ve spent over 5 years growing my skills and look forward to my continued growth.</p>
-        <p>I love to make things and I especially enjoy learning how to make them. When not expanding my knowledge of coding languages, I’ll spend hours researching other miscellaneous skills—like how to render 3D sprinkles and how to turn wool blue. I’m a nerd and a geek, and proud to be both.</p>
+            <p>Shortly after graduation, I created my first website. As basic and unresponsive as it was, I was excited by the potential of what coding could do. Since then, I’ve spent over 5 years growing my skills and look forward to my continued growth.</p>
+            <p>I love to make things and I especially enjoy learning how to make them. When not expanding my knowledge of coding languages, I’ll spend hours researching other miscellaneous skills—like how to render 3D sprinkles and how to turn wool blue. I’m a nerd and a geek, and proud to be both.</p>
           </div>
         </div>
       </section>
@@ -173,11 +174,11 @@
               <div class="button__group">
                 <div class="button__wrapper">
                   <div class="button__desc button__desc--popout"></div>
-                  <a class="button button--popout" href="https://woolenyeti.com">WoolenYeti.com</a>
+                  <a class="button button--popout" href="https://woolenyeti.com" title="Go to the website I created for my Woolen Yeti crochet patterns.">Woolen Yeti Website</a>
                 </div>
                 <div class="button__wrapper">
                   <div class="button__desc button__desc--popout"></div>
-                  <a class="button button--popout" href="https://www.instagram.com/woolenyeti/">Woolen Yeti on Instagram</a>
+                  <a class="button button--popout" href="https://www.instagram.com/woolenyeti/" title="View my crochet creations and more on my crochet Instargram account.">Woolen Yeti on Instagram</a>
                 </div>
               </div>
             </li>
@@ -187,7 +188,7 @@
               <div class="button__group">
                 <div class="button__wrapper">
                   <div class="button__desc button__desc--popout"></div>
-                  <a class="button button--popout" href="https://www.instagram.com/mirananemone/">Mirananemone on Instagram</a>
+                  <a class="button button--popout" href="https://www.instagram.com/mirananemone/" title="See some of my art on Instagram">Mirananemone on Instagram</a>
                 </div>
               </div>
             </li>
@@ -229,17 +230,17 @@
                 </div>
                 <div class="button__wrapper">
                   <div class="button__desc button__desc--popout"></div>
-                  <a class="button button--popout" href="https://woolenyeti.com">WoolenYeti</a>
+                  <a class="button button--popout" href="https://woolenyeti.com">Woolen Yeti</a>
                 </div>
               </div>
               <div class="button__group wrapper wrapper--space-even wrapper--max-30 wrapper--center">
                 <div class="button__wrapper">
                   <div class="button__desc button__desc--popout"></div>
-                  <a class="button button--popout" href="https://www.instagram.com/mirananemone/">Art Instagram</a>
+                  <a class="button button--popout" href="https://www.instagram.com/mirananemone/">Art on Instagram</a>
                 </div>
                 <div class="button__wrapper">
                   <div class="button__desc button__desc--popout"></div>
-                  <a class="button button--popout" href="https://www.instagram.com/woolenyeti/">Crochet Instagram</a>
+                  <a class="button button--popout" href="https://www.instagram.com/woolenyeti/">Crochet on Instagram</a>
                 </div>
               </div>
             </li>
@@ -253,14 +254,33 @@
   <footer class="site-footer" id="site-footer">
       <div class="wrapper wrapper--outer column__group column__group--center column__group--not-for-tiny">
         <div class="column column--8-12">
-          <p class="paragraph paragraph--smaller color--light">This site is designed & built by <span class="no-wrap">Miranda Hoover</span></p>
-          <p class="paragraph paragraph--smaller color--light">This site is hosted by <a class="link link--inline" href="https://pages.github.com/">GitHub Pages</a></p>
+          <p class="paragraph paragraph--smaller color--white">This site is designed & built by <span class="no-wrap">Miranda Hoover</span></p>
+          <p class="paragraph paragraph--smaller color--white">This site is hosted by
+            <a class="link link--inline link--horiz-padding-slight" href="https://pages.github.com/" target="_blank">
+              GitHub Pages<span class="sr-only">(opens in new window)</span><img class="icon icon--inline" src="assets/images/icons/icon-newwindow-white-32px.svg" alt="">
+            </a>
+          </p>
         </div>
         <div class="column column--4-12">
           <ul class="button__group button__group--fixed-space-1 site-footer__social-links list list--no-bullets">
-            <li class="button"><a href="https://github.com/MirandaKim" title="GitHub: view my profile."><img class="icon icon--scale-on-hover" src="assets/images/icons/GitHub-Mark-Light-32px.png" alt=""></a></li>
-            <li class="button"><a href="mailto:Miranda.WebD@gmail.com" title="Email me"><img class="icon icon--scale-on-hover" src="assets/images/icons/email-icon-white-32px.png" alt=""></a></li>
-            <li class="button"><a href="https://www.linkedin.com/in/miranda-hoover/" title="LinkedIn: view my profile."><img class="icon icon--scale-on-hover" src="assets/images/icons/In-White-32px-R.png" alt=""></a></li>
+            <li class="button">
+              <a href="https://github.com/MirandaKim" title="GitHub: view my profile.">
+                <img class="icon icon--scale-on-hover" src="assets/images/icons/GitHub-Mark-Light-32px.png" alt="">
+                <span class="sr-only">My Git Hub Portfolio</span>
+              </a>
+            </li>
+            <li class="button">
+              <a href="mailto:Miranda.WebD@gmail.com" title="Email me">
+                <img class="icon icon--scale-on-hover" src="assets/images/icons/email-icon-white-32px.png" alt="">
+                <span class="sr-only">Email Me</span>
+              </a>
+            </li>
+            <li class="button">
+              <a href="https://www.linkedin.com/in/miranda-hoover/" title="LinkedIn: view my profile.">
+                <img class="icon icon--scale-on-hover" src="assets/images/icons/In-White-32px-R.png" alt="">
+                <span class="sr-only">My Linked In Portfolio</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>

@@ -13,7 +13,9 @@
   *************
 
   # Icon
+  # Inline
   # On Hover
+
 
 */
 
@@ -22,6 +24,23 @@
 /************************************/
 
 .icon {
+
+  /**************************************/
+  /*   # Inline                        */
+  /************************************/
+
+  &--inline {
+    /*position*/
+    position: relative;
+    top: 2px;
+    /*display*/
+    display: inline-block;
+    /*structure*/
+    height: calc(1rem - 3px);
+    /*spacing*/
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 
 
 /**************************************/
@@ -34,6 +53,7 @@
     transition-duration: 200ms;
     transition-timing-function: linear;
 
+    &:focus,
     &:hover {
       transform: scale(1);
     }

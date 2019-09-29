@@ -45,6 +45,10 @@
   &--light {
     color: rgb($color_almostWhite);
   }
+
+  &--white {
+    color: rgb($color_white);
+  }
 }
 
 .no-wrap {

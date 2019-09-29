@@ -59,6 +59,7 @@ Full Example:
       display: none;
     }
   }
+  &--hover-toggle:focus,
   &--hover-toggle:hover {
     .speech-bubble {
       display: block;

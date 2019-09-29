@@ -69,8 +69,10 @@
 /************************************/
 
 .button {
-
+  /*position*/
     position: relative;
+    /*typography*/
+    text-decoration: none;
     white-space: nowrap;
 
   /**************************************/
@@ -88,6 +90,7 @@
     *   > Hover   *
     **************/
 
+    &:focus,
     .has-no-touch &:hover {
       /*colors*/
       color: rgb($color_mediumBlue);

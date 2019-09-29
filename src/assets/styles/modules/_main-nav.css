@@ -94,6 +94,7 @@ $mn_activeLinkBulletSize: 12px;
     z-index: 1;
     /*typography*/
     font-size: 1.2rem;
+    text-decoration: none;
     /*spacing*/
     padding-top: 9px;
     padding-bottom: 9px;
@@ -195,6 +196,7 @@ $mn_activeLinkBulletSize: 12px;
         display: none;
       }
 
+      &:focus,
       .has-no-touch &:hover {
         /*mixin*/
         @mixin shadowBold $color_darkBlue;

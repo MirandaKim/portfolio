@@ -1,0 +1,31 @@
+
+/****************************************************/
+/*                                                 */
+/*   Screen Reader Only CSS (_sr-only.css)        */
+/*                                               */
+/************************************************/
+/*
+
+  Style content intended only for screen readers
+  (hidden visually but still read by screen readers)
+
+*/
+
+/*
+Add this class to text that should be read by screen readers,
+but is not intended to be displayed visually.
+*/
+.sr-only {
+  /*position*/
+  position: absolute;
+  /*structure*/
+  height: 1px;
+  width: 1px;
+  /*spacing*/
+  padding: 0;
+  margin: -1px;
+  /*overflow*/
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

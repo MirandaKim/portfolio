@@ -65,6 +65,9 @@
   *************/
 
   &:focus {
+    /*colors*/
+    color: $color_a;
+    /*transform*/
     transform: translateX(calc($site_margin_outer_sides * -1));
   }
 }

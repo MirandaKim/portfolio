@@ -79,10 +79,10 @@ a {
   cursor: pointer;
   /*typography*/
   font-family: $font_karla;
-  text-decoration: none;
   /*colors*/
   color: $color_text_link;
 
+  &:focus,
   .has-no-touch &:hover {
     color: $color_text_link_hover;
   }
