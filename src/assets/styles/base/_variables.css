@@ -68,7 +68,7 @@ $color_black: 0, 0, 0;
 
 /*BLUES*/
 $color_darkerBlue: 51, 61, 81; /*nearly black*/
-$color_darkBlue: 71, 81, 101;
+$color_darkBlue: 61, 71, 91;
 $color_mediumBlue: 132, 170, 191;
 $color_brightBlue: 11, 180, 227;
 /* $color_lightBlue: 202, 220, 241; */
@@ -94,7 +94,7 @@ $color_e: rgb($color_mediumYellow);
 *************************/
 
 /*TEXT*/
-$color_text_main: rgb($color_darkBlue);
+$color_text_main: rgb($color_darkerBlue);
 $color_text_link: rgb($color_darkYellow);
 $color_text_link_hover: rgb($color_mediumBlue);
 $color_text_link_button: rgb($color_darkBlue);
