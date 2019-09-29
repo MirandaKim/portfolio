@@ -79,9 +79,11 @@ let mainNav_visibleClassStr = `${mainNav_block}--visible`;
 let mainNav_toggleSelectors = [`.site-header__menu-toggle`];
 let mainNav_closeSelectors = [`${mainNav_selector}__link-group`, 'article', '.logo'];
 let mainNav_openSelectors = [];
+let mainNav_linksSelector = ['.main-nav__link'];
 
 let navDisplay = new NavDisplay(mainNav_selector, mainNav_visibleClassStr, body_visibleMenuClassStr);
 navDisplay.setEvents({ // See NavDisplay.class.js for config options.
+  focusSelectors: mainNav_linksSelector, // selectors for focus to open event
   toggleSelectors: mainNav_toggleSelectors, // selectors for click to toggle event
   closeSelectors: mainNav_closeSelectors, // selectors for click to close event
   openSelectors: mainNav_openSelectors // selectors for click to open event
