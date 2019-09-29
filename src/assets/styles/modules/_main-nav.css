@@ -104,6 +104,7 @@ $mn_activeLinkBulletSize: 12px;
     color: $color_a;
 
     /*for mouse devices at tiny sizes*/
+    &:focus,
     .has-no-touch &:hover {
       color: rgb($color_darkBlue);
       font-weight: 900;
